@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+    frontend:
+        build: ./frontend
+        image: frontend_image
+        container_name: react_container
+        ports:
+        - "3000:3000"
+    backend:
+        build: ./backend
+        image: backend_image
+        container_name: django_container
+        ports:
+        - "8000:8000"
