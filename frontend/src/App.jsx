@@ -1,12 +1,12 @@
-import { useState } from "react";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/auth/LoginPage";
 
 function App() {
+  const router = createBrowserRouter([
+    {path: '/login', element: <LoginPage></LoginPage>}
+  ])
   return (
-    <>
-      <LoginPage />
-    </>
+    <RouterProvider router={router} />
   );
 }
 
